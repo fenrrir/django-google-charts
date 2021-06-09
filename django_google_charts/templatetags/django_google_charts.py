@@ -31,4 +31,5 @@ def django_google_chart_js():
         chart_js_url,
     )
 
+
 register.simple_tag(django_google_chart_js)

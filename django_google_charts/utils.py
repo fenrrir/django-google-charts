@@ -13,8 +13,8 @@ class DateTimeEncoder(json.JSONEncoder):
                 obj = obj - obj.utcoffset()
 
             encoded_object = int(
-                calendar.timegm(obj.timetuple()) * 1000 +
-                obj.microsecond / 1000
+                calendar.timegm(obj.timetuple()) * 1000
+                + obj.microsecond / 1000
             )
 
         # If a Date, serialise to YYYY-MM-DD to be parsed in JS
